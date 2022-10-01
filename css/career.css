@@ -176,7 +176,8 @@ a {
 
 .home .text p {
 
-	padding-left: 12px;
+	padding-left: 0px;
+	margin-left: 10px;
 }
 
 .ourmission h1 {

@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- Created By CodingNepal -->
 <html lang="en" dir="ltr">
 
 <head>
@@ -56,12 +55,13 @@
 	</script>
 	<style>
 		.home .text h3{
-background: transparent;
+      background: transparent;
 text-align: center;
 margin-left: auto;
 margin-bottom: 20px;
 letter-spacing: 0em;
 font-weight: 326;
+color: white;
 		}
 		.home .img img {
   width: 50%;
@@ -82,49 +82,37 @@ font-weight: 326;
       <img src="images/event.png" alt="home" />
     </div>
   </div>
- 
-  <footer class="footer">
-    <div class="container">
-      <div class="row">
-        <div class="footer-col">
-          <h4>Useful Links</h4>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="event.html">Events</a></li>
-            <li><a href="about.html">About us</a></li>
-            <li><a href="career.html">Careers</a></li>
-            <li><a href="register.html">Register</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Contact</h4>
-          <ul>
-            <li><a href="#">+91 584729965</a></li>
-            <li><a href="#">techsaavy@gmail.com</a></li>
-            <li><a href="#">Ramapuram, Chennai, Tamil Nadu</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Registration links</h4>
-          <ul>
-            <li><a href="https://forms.gle/nNVjvMZjwqYYZAAKA" target="_blank">Careers</a></li>
-            <li><a href="https://forms.gle/wGghGkfwMoNSBdZdA" target="_blank">Industry Registration</a></li>
-            <li><a href="https://forms.gle/HHg38EqsTWRXiWT4A" target="_blank">Alumni Registration</a></li>
-            <li><a href="https://forms.gle/mMYA9zf8uPY8D9cK8" target="_blank">Member Registration</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>follow us</h4>
-          <div class="social-links">
-            <a href="#"><i class="fab fa-slack"></i></a>
-            <a href="https://github.com/TechSaavyClub"><i class="fab fa-github"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
+  <div w3-include-html="footer.html"></div> 
+  <script>
+    function includeHTML() {
+      var z, i, elmnt, file, xhttp;
+      /* Loop through a collection of all HTML elements: */
+      z = document.getElementsByTagName("*");
+      for (i = 0; i < z.length; i++) {
+        elmnt = z[i];
+        /*search for elements with a certain atrribute:*/
+        file = elmnt.getAttribute("w3-include-html");
+        if (file) {
+          /* Make an HTTP request using the attribute value as the file name: */
+          xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function() {
+            if (this.readyState == 4) {
+              if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+              if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+              /* Remove the attribute, and call this function once more: */
+              elmnt.removeAttribute("w3-include-html");
+              includeHTML();
+            }
+          }
+          xhttp.open("GET", file, true);
+          xhttp.send();
+          /* Exit the function: */
+          return;
+        }
+      }
+    }
+    includeHTML()
+    </script> 
 
 </body>
 

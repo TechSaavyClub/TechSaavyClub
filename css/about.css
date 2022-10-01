@@ -1,5 +1,3 @@
-
-
 .container1{
     width: 90%;
     display: flex;
@@ -11,6 +9,7 @@
     padding-top: 100px;
     padding-left: 50px;
 }
+
 .img2-container{
     width: 60%;
     display: flex;
@@ -132,22 +131,26 @@ a{
   margin: 4px 0px 10px 0px;
   font-family: 'Montserrat', sans-serif;
 }
-	.home .text h1 {
+
+.home .text h1 {
 			
 			margin-top: 10px;
+      transition: 1s all;
 		}
 		.home .img img {
   width: 62%;
 			margin-top: 100px;
+      margin-left: 115px;
 		}.home .text h3 {
-			
-			font-size: 14px;
-text-align: left;
-margin-left: 0;
-		}
+      font-size: 20px;
+      text-align: left;
+      margin-left: 0;
+    }
 		.home .text p, .subtitle {
 			font-weight: 323;
-			font-size: 17px;
+font-size: 20px;
+margin-left: 0px;
+
 		}
 	
 			.ourmission h1{
@@ -165,25 +168,30 @@ font-size: 29px
 				margin: 2rem;
   margin-top: 2rem;
   margin-left: 2rem;
-
-
-color: #393939;
-padding: 1rem;
-border-radius: 10px;
-margin-top: 40px;
-font-weight: 100;
-border: 1px solid #d9d9d9;
-margin-left: auto;
-
-			width: 60%;
-margin-left: auto;
+  color: #393939;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-top: 40px;
+  font-weight: 100;
+  border: 1px solid #d9d9d9;
+  margin-left: auto;
+  width: 60%;
+  margin-left: auto;
+  background-color: #ffffffb5;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  
 			}
 					.ourmissiondesc {
 	padding: 0.5rem;
   padding-top: 0.5rem;
 padding-top: 1rem;
 			}
-		
+      @media only screen and (max-device-width: 900px){
+      .home .text h3 {
+        font-size: 15px;
+ 
+      }
+    }	
 		@media only screen and (min-device-width: 500px) and (max-device-width: 750px){
 			.home .img {
   min-width: 50%;
@@ -222,9 +230,12 @@ margin-left: auto;
 width: auto;
 margin-left: 20px;
 			}
-		}@media only screen and (max-device-width: 500px){
-			
-						.home .img {
+		}
+    
+    
+    
+    @media only screen and (max-device-width: 500px){
+	.home .img {
   min-width: 42%;
 text-align: left;
 margin-right: auto;

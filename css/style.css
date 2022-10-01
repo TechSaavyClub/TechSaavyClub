@@ -47,7 +47,9 @@ nav {
 
 nav .logo img {
 	margin-top: 20px;
-	max-width: 80px;
+	max-width: 85px;
+	background-color: white;
+	border-radius: 88px;
 }
 
 nav ul {
@@ -69,10 +71,11 @@ nav ul li a {
 	transition: all 0.3s ease;
 	font-size: 15px;
 	font-weight: 100;
-	color: white;
+	color:black;
 	font-family: 'Anek Malayalam', sans-serif;
-	font-weight: 312;
+	font-weight: 500;
 	font-size: 19px;
+
 }
 
 nav ul li a.active,
@@ -354,6 +357,7 @@ ul {
 	nav .logo img {
 		margin-top: 5px;
 		max-width: 60px;
+		
 	}
 }
 
@@ -395,27 +399,25 @@ ul {
 	line-height: 1.1;
 	font-size: 8.3vw;
 	background-color: transparent;
-	background-image: linear-gradient(0deg, transparent 24%, rgba(255, 255, 255, .05) 25%, rgba(255, 255, 255, .05) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, .05) 75%, rgba(255, 255, 255, .05) 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, rgba(255, 255, 255, .05) 25%, rgba(255, 255, 255, .05) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, .05) 75%, rgba(255, 255, 255, .05) 76%, transparent 77%, transparent);
-
+	
 	background-size: 50px 50px;
 }
 
 .home .text h3 {
 	font-family: 'Anek Malayalam', sans-serif;
-
 	padding-left: 15px;
 	width: fit-content;
 	padding-right: 15px;
-	color: #FFF;
+	color: #5a0000;
 	margin-left: auto;
 	margin-right: 20px;
-	background-color: #00000063;
+	background-color: #fff;
 	border-radius: 50px;
-
-	font-size: 18px;
+	font-size: 22px;
 	line-height: 1.5;
 	letter-spacing: 0.05em;
-	font-weight: 283;
+	font-weight: 500;
+	mix-blend-mode: hard-light;
 }
 
 
@@ -473,7 +475,8 @@ border-right: 30px solid #e6e6e6;*/
 		margin-top: 2px;
 		max-width: 50px;
 	}
-
+	
+	
 	.home .text h1 {
 		font-size: 12vw;
 		color: #FFF;
@@ -527,11 +530,11 @@ border-right: 30px solid #e6e6e6;*/
 	font-family: 'Anek Malayalam', sans-serif;
 	font-weight: 364;
 	font-size: 1.6vw;
-	margin-left: 0px;
+	margin-left: 21px;
 }
 
 
-}
+
 
 @media only screen and (min-device-width: 200px) and (max-device-width: 1024) {
 	nav .logo img {
@@ -679,38 +682,33 @@ button {
 }
 
 .bgcurved {
-
 	position: absolute;
-	height: 550px;
-	width: 150%;
+	height: 800px;
+	width: 70%;
 	background-color: black;
 	z-index: -10;
-	transform: rotate(-30deg);
+
 	top: 0px;
-	left: -500px;
+
 	background: #43C6AC;
-	/* fallback for old browsers */
-	background: -webkit-linear-gradient(to right, #4c2200, #b77600);
-	/* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to right, #4c2200, #b77600);
-	/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	background: linear-gradient(to right, #833376, #b62e77);
+	background: linear-gradient(to right, #833376, #b62e77);
+	border-radius: 45% 55% 100% 0% / 0% 0% 100% 100%;
 
 
 }
 
 .bgcurved1 {
 	position: absolute;
-
-	background-color: black;
-	z-index: -10;
-	transform: rotate(-30deg);
-	top: 0px;
-	left: -500px;
-	background-color: transparent;
-	background-image: linear-gradient(0deg, transparent 24%, rgba(255, 255, 255, .05) 25%, rgba(255, 255, 255, .05) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, .05) 75%, rgba(255, 255, 255, .05) 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, rgba(255, 255, 255, .05) 25%, rgba(255, 255, 255, .05) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, .05) 75%, rgba(255, 255, 255, .05) 76%, transparent 77%, transparent);
-	background-size: 50px 50px;
-	height: 550px;
-	width: 150%;
+background-color: black;
+z-index: -10;
+top: 0;
+left: 0;
+background-color: transparent;
+background-image: linear-gradient(0deg, transparent 24%, rgba(255, 255, 255, .05) 25%, rgba(255, 255, 255, .05) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, .05) 75%, rgba(255, 255, 255, 0.01) 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, rgba(255, 255, 255, .05) 25%, rgba(255, 255, 255, .05) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, 0.02) 75%, rgba(255, 255, 255, 0.02) 76%, transparent 77%, transparent);
+background-size: 50px 50px;
+height: 100vh;
+width: 189%;
 
 
 }
@@ -723,7 +721,7 @@ button {
 	}
 }
 
-@media only screen and (min-device-width: 200px) and (max-device-width: 750px) {
+@media only screen and (min-device-width: 200px) and (max-device-width: 900px) {
 
 	.btn-8 {
 
@@ -738,15 +736,15 @@ button {
 		width: 150%;
 		background-color: black;
 		z-index: -10;
-		transform: rotate(-30deg);
+		
 
 		left: -120px;
 		background: #43C6AC;
-		background: -webkit-linear-gradient(to right, #4c2200, #b77600);
-		background: linear-gradient(to right, #4c2200, #b77600);
+		background: linear-gradient(to right, #833376, #b62e77);
+	background: linear-gradient(to right, #833376, #b62e77);
 		border-radius: 600px;
 		animation: none;
-
+		border-radius: 45% 55% 100% 0% / 0% 0% 100% 100%;
 	}
 
 	.bgcurved1 {
@@ -755,13 +753,14 @@ button {
 		width: 150%;
 		background-color: black;
 		z-index: -10;
-		transform: rotate(-30deg);
+	
 
 		left: -180px;
 		background-color: transparent;
 		background-image: linear-gradient(0deg, transparent 24%, rgba(255, 255, 255, .05) 25%, rgba(255, 255, 255, .05) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, .05) 75%, rgba(255, 255, 255, .05) 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, rgba(255, 255, 255, .05) 25%, rgba(255, 255, 255, .05) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, .05) 75%, rgba(255, 255, 255, .05) 76%, transparent 77%, transparent);
 		background-size: 50px 50px;
 		animation: rotate1 220s infinite linear;
+		border-radius: 45% 55% 100% 0% / 0% 0% 100% 100%;
 	}
 
 	.home .text p,
@@ -805,10 +804,10 @@ button {
 	.home .text h3 {
 
 		font-size: 12px;
-		color: white;
+		color: black;
 		margin-left: 0;
 		margin-top: 10px;
-
+		font-weight: 500;
 	}
 
 }

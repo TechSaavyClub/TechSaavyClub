@@ -214,9 +214,9 @@ width: fit-content;
   }
 }
 .home .text h1 {
-			
-margin-top: 68px;
-			font-size: 6.3vw;
+  margin-top: 68px;
+  font-size: 6.3vw;
+  margin-right: 240px;
 		}
 		.home .img img {
   width: 62%;

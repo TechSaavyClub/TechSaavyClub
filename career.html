@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- Created By CodingNepal -->
 <html lang="en" dir="ltr">
 
 <head>
@@ -66,7 +65,7 @@
     <div class="box">
       <div class="top-bar"></div>
       <div class="top">
-        <i class="fa fa-check-circle" aria-hidden="true"></i>
+        <!-- <i class="fa fa-check-circle" aria-hidden="true"></i> -->
       </div>
       <div class="content4">
         <img src="images/pi.png" alt="Club Head - Sharan Deepak RB">
@@ -78,7 +77,7 @@
       <div class="top-bar"></div>
       <div class="top">
         <div>
-          <i class="fa fa-check-circle" aria-hidden="true"></i>
+          <!-- <i class="fa fa-check-circle" aria-hidden="true"></i> -->
         </div>
       </div>
       <div class="content4">
@@ -90,7 +89,7 @@
     <div class="box">
       <div class="top-bar"></div>
       <div class="top">
-        <i class="fa fa-check-circle" aria-hidden="true"></i>
+        <!-- <i class="fa fa-check-circle" aria-hidden="true"></i> -->
       </div>
       <div class="content4">
         <img src="images/vdr.png" alt="Shivapriya PS - Design Head">
@@ -100,49 +99,36 @@
     </div>
     </div>
   </div>
- 
-  <footer class="footer">
-    <div class="container">
-      <div class="row">
-        <div class="footer-col">
-          <h4>Useful Links</h4>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="event.html">Events</a></li>
-            <li><a href="about.html">About us</a></li>
-            <li><a href="career.html">Careers</a></li>
-            <li><a href="register.html">Register</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Contact</h4>
-          <ul>
-            <li><a href="#">+91 584729965</a></li>
-            <li><a href="#">techsaavy@gmail.com</a></li>
-            <li><a href="#">Ramapuram, Chennai, Tamil Nadu</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Registration links</h4>
-          <ul>
-            <li><a href="https://forms.gle/nNVjvMZjwqYYZAAKA" target="_blank">Careers</a></li>
-            <li><a href="https://forms.gle/wGghGkfwMoNSBdZdA" target="_blank">Industry Registration</a></li>
-            <li><a href="https://forms.gle/HHg38EqsTWRXiWT4A" target="_blank">Alumni Registration</a></li>
-            <li><a href="https://forms.gle/mMYA9zf8uPY8D9cK8" target="_blank">Member Registration</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>follow us</h4>
-          <div class="social-links">
-            <a href="#"><i class="fab fa-slack"></i></a>
-            <a href="https://github.com/TechSaavyClub"><i class="fab fa-github"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
+  <script>
+    function includeHTML() {
+      var z, i, elmnt, file, xhttp;
+      /* Loop through a collection of all HTML elements: */
+      z = document.getElementsByTagName("*");
+      for (i = 0; i < z.length; i++) {
+        elmnt = z[i];
+        /*search for elements with a certain atrribute:*/
+        file = elmnt.getAttribute("w3-include-html");
+        if (file) {
+          /* Make an HTTP request using the attribute value as the file name: */
+          xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function() {
+            if (this.readyState == 4) {
+              if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+              if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+              /* Remove the attribute, and call this function once more: */
+              elmnt.removeAttribute("w3-include-html");
+              includeHTML();
+            }
+          }
+          xhttp.open("GET", file, true);
+          xhttp.send();
+          /* Exit the function: */
+          return;
+        }
+      }
+    }
+    includeHTML()
+    </script> 
 
 </body>
 
