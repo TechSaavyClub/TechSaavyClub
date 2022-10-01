@@ -1,24 +1,26 @@
 <!DOCTYPE html>
-<!-- Created By CodingNepal -->
 <html lang="en" dir="ltr">
 
 <head>
   <meta charset="utf-8" />
-  <title>Register</title>
-  <link rel="stylesheet" href="css/register.css" />
-  <link rel="shortcut icon" href="images/techsaavy.svg" type="image/x-icon">
+  <title>TechSaavy Club</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/register.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link rel="shortcut icon" href="images/techsaavy.svg" type="image/x-icon">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
 <body>
   <nav>
     <div class="logo">
-      <a href="index.html">TECHSAAVY CLUB</a>
+      <a href="index.html"><img src="images/techsaavy.svg" alt="logo" /></a>
     </div>
     <input type="checkbox" id="click">
     <label for="click" class="menu-btn">
-      <i class="fas fa-bars"></i>
+      <i class="fas fa-bars" onclick="preventscroll()"></i>
     </label>
     <ul>
       <li><a href="index.html">Home</a></li>
@@ -29,85 +31,107 @@
 
     </ul>
   </nav>
+	<script>
+	function preventscroll(){
+		
+		document.getElementsByTagName("body")[0].classList.toggle("scrolldeny");
+	}
+	
+	</script>
+	<style>
+		
+	</style>
+	<div class="curvedbgmobile">
+<div class="bgcurved"></div>
+	<div class="bgcurved1"></div>
+		</div>
+  <div class="home">
+    <div class="text">
+      <h1>Register here</h1>
+    </div>
 
-  <div class="cardcontainer">
-    <div class="card">
-      <div class="icon">
-        <ion-icon name="globe-outline"></ion-icon>
+ 
+  </div>
+	
+<div class="container3">
+
+	<div class="container3main">
+    <div class="box">
+      <div class="top-bar"></div>
+      <div class="top">
+        <!-- <i class="fa fa-check-circle" aria-hidden="true"></i> -->
       </div>
-      <div class="content">
-        <h2>Industry</h2>
-        <p>Industries register here to work with us!</p>
-        <button class="custom-btn btn-16"><a href="https://forms.gle/wGghGkfwMoNSBdZdA" target="_blank" style="text-decoration: none; color: #fff;">REGISTER</a></button>
-      </div>
-    </div>
-    <div class="card">
-      <div class="icon">
+      <div class="content4">
+            <div class="icon">
         <ion-icon name="diamond-outline"></ion-icon>
+                <img src="images/img1.png" alt="industry logo">
       </div>
-      <div class="content">
-        <h2>Alumni</h2>
-        <p>Alumni, Register here to give your contribution!</p>
-        <button class="custom-btn btn-16"><a href="https://forms.gle/HHg38EqsTWRXiWT4A" target="_blank" style="text-decoration: none; color: #fff;">REGISTER</a></button>
+        <strong>Industry</strong>
+      
+				   <a href="https://forms.gle/wGghGkfwMoNSBdZdA" target="_blank" class="button-65">Register</a>
+      
       </div>
     </div>
-    <div class="card">
-      <div class="icon">
-        <ion-icon name="rocket-outline"></ion-icon>
+    <div class="box">
+      <div class="top-bar"></div>
+      <div class="top">
+        <div>
+          <!-- <i class="fa fa-check-circle" aria-hidden="true"></i> -->
+        </div>
       </div>
-      <div class="content">
-        <h2>Members</h2>
-        <p>Students, register here to shape your future!</p>
-        <button class="custom-btn btn-16"><a href="https://forms.gle/mMYA9zf8uPY8D9cK8" target="_blank" style="text-decoration: none; color: #fff;">REGISTER</a></button>
+      <div class="content4">
+        <img src="images/cfi.png" alt="Alumni logo">
+        <strong>Alumni</strong>
+ 
+		   <a href="https://forms.gle/HHg38EqsTWRXiWT4A" target="_blank" class="button-65">Register</a>
       </div>
+    </div>
+    <div class="box">
+      <div class="top-bar"></div>
+      <div class="top">
+        <!-- <i class="fa fa-check-circle" aria-hidden="true"></i> -->
+      </div>
+      <div class="content4">
+        <img src="images/vdr.png" alt="member logo">
+        <strong>Members</strong>
+		   
+ <a href="https://forms.gle/mMYA9zf8uPY8D9cK8" target="_blank" class="button-65">Register</a>
+      </div>
+    </div>
     </div>
   </div>
+  <div w3-include-html="footer.html"></div> 
+  <script>
+    function includeHTML() {
+      var z, i, elmnt, file, xhttp;
+      /* Loop through a collection of all HTML elements: */
+      z = document.getElementsByTagName("*");
+      for (i = 0; i < z.length; i++) {
+        elmnt = z[i];
+        /*search for elements with a certain atrribute:*/
+        file = elmnt.getAttribute("w3-include-html");
+        if (file) {
+          /* Make an HTTP request using the attribute value as the file name: */
+          xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function() {
+            if (this.readyState == 4) {
+              if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+              if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+              /* Remove the attribute, and call this function once more: */
+              elmnt.removeAttribute("w3-include-html");
+              includeHTML();
+            }
+          }
+          xhttp.open("GET", file, true);
+          xhttp.send();
+          /* Exit the function: */
+          return;
+        }
+      }
+    }
+    includeHTML()
+    </script> 
 
-  <footer class="footer">
-    <div class="container">
-      <div class="row">
-        <div class="footer-col">
-          <h4>Useful Links</h4>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="event.html">Events</a></li>
-            <li><a href="about.html">About us</a></li>
-            <li><a href="career.html">Careers</a></li>
-            <li><a href="register.html">Register</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Contact</h4>
-          <ul>
-            <li><a href="#">+91 584729965</a></li>
-            <li><a href="#">techsaavy@gmail.com</a></li>
-            <li><a href="#">Ramapuram, Chennai, Tamil Nadu</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Registration links</h4>
-          <ul>
-            <li><a href="https://forms.gle/nNVjvMZjwqYYZAAKA" target="_blank">Careers</a></li>
-            <li><a href="https://forms.gle/wGghGkfwMoNSBdZdA" target="_blank">Industry Registration</a></li>
-            <li><a href="https://forms.gle/HHg38EqsTWRXiWT4A" target="_blank">Alumni Registration</a></li>
-            <li><a href="https://forms.gle/mMYA9zf8uPY8D9cK8" target="_blank">Member Registration</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>follow us</h4>
-          <div class="social-links">
-            <a href="#"><i class="fab fa-slack"></i></a>
-            <a href="https://github.com/TechSaavyClub"><i class="fab fa-github"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>
